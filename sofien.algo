@@ -1,0 +1,25 @@
+ALGORITHM Checkpoint-algo
+VAR
+    L: INTEGER :=1;
+    n_w : INTEGER :=1;
+    n_v : INTEGER :=0;
+    c : CHAR 
+
+BEGIN
+    REPEAT
+        Write ("Enter the character")
+        Read (c)
+        L=L+1
+        IF (c =" ") THEN
+            n_w=n_w +1
+        ELSE_IF (c="a" or "e" or "y" or "u" or "i" or "o") THEN
+            n_v = n_v+1
+        END_IF
+    UNTIL (c=".")
+    IF (L=1) THEN
+        n_w =0
+    END_IF
+    Write("the length of the sentence = " L)
+    Write("the number of words = " n_w)
+    Write("the number of vowels =" n_v)
+END
